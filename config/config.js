@@ -1,4 +1,4 @@
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'production';
 
 const config = {
     development: {
@@ -8,7 +8,7 @@ const config = {
     },
     production: {
         port: process.env.PORT || 3000,
-        dbURL: process.env.DB_URL_CREDENTIALS,
+        dbURL: 'mongodb+srv://pashov91:Tim911003@mynewcluster.0hywvsh.mongodb.net/Forum',
         origin: []
     }
 };
