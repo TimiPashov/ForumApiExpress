@@ -15,8 +15,8 @@ dbConnector()
     require('./config/express')(app);
 
     app.use(cors({
-      // origin: config.origin,
-      origin: 'http://localhost:4200',
+      origin: config.origin,
+      // origin: 'http://localhost:4200',
       credentials: true
     }));
 
