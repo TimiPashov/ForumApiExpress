@@ -9,7 +9,7 @@ const config = {
     production: {
         port: process.env.PORT || 3000,
         dbURL: 'mongodb+srv://pashov91:Tim911003@mynewcluster.0hywvsh.mongodb.net/Forum',
-        origin: []
+        origin: ['https://myforumjs.web.app']
     }
 };
 
