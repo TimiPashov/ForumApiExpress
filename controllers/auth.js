@@ -65,13 +65,15 @@ function login(req, res, next) {
 
       const token = utils.jwt.createToken({ id: user._id });
 
-      
+      if (process.env.NODE_ENV === "production") {
         res.cookie(authCookieName, token, {
           httpOnly: true,
           sameSite: "none",
           secure: true,
         });
-      
+      } else {
+        res.cookie(authCookieName, token, { httpOnly: true });
+      }
       res.status(200).send(user);
     })
     .catch(next);
