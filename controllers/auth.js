@@ -86,7 +86,7 @@ function logout(req, res) {
     .create({ token })
     .then(() => {
       res
-        .clearCookie(authCookieName)
+        .clearCookie(authCookieName, { sameSite: "lax" })
         .status(204)
         .send({ message: "Logged out!" });
     })
